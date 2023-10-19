@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root{
+	--primary-color: #141414;
+	--secondary-color: #E50914;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background-color: var(--primary-color);
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  background-color: var(--secondary-color);
+  justify-content: space-between;
+}
+
+.btn-inicio {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+}
+
+.boton{
+	width: 30px;
+	height: 30px;
+	background: none;
+	border: none;
+}
+
+.buscar {
+  background-color: transparent;
+  border: 3px solid var(--primary-color);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.buscar::placeholder{
+	color: #000;
+}
+
+.buscar:focus{
+	outline:none;
+	background-color: var(--secondary-color);
+}
+
+.config{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex: 1;
+}
+
+.usuario{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.boton svg{
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+main{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.pelicula{
+	width: 300px;
+	height: auto;
+	margin: 1rem;
+	background-color: var(--secondary-color);
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+	position: relative;
+	overflow: hidden;
+	border-radius: 3px;
+}
+.pelicula img{
+	width: 100%;
+}
+
+.pelicula-info{
+	color: #eee;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.2rem;
+	padding: 0.5rem 1rem 1rem;
+	letter-spacing: 0.5px;
+}
+
+.pelicula-info h3{
+	margin-top: 0;
+}
+
+.pelicula-info span {
+	background-color: var(--primary-color);
+	padding: 0.25rem 0.5rem;
+	border-radius: 3px;
+	font-weight: bold;
+}
+
+.pelicula-info span.green{
+	color: lightgreen;
+}
+
+.pelicula-info span.orange {
+  color: orange;
+}
+
+.pelicula-info span.red {
+  color: red;
+}
+
+.overview{
+	background-color: #fff;
+	padding: 2rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	max-height: 100%;
+	transform: translateY(101%);
+	overflow-y: auto;
+	transition: transform 0.3s ease-in;
+}
+
+.pelicula:hover .overview{
+	transform: translateY(0);
+}
+
+
+@media screen and (min-width: 768px) {
+  .pelicula {
+    max-width: 400px;
+    /* Ajusta otros estilos según sea necesario */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pelicula {
+    max-width: 500px;
+    /* Ajusta otros estilos según sea necesario */
+  }
+}
+
